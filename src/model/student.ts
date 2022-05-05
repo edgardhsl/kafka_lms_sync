@@ -1,8 +1,7 @@
-export class Student {
+import { BaseModel } from "./base_model";
+
+export class Student extends BaseModel {
     id: number;
     name: string;
-    email: string;
-    birthDate: Date;
-    registrationDate: Date;
-    active: boolean;
+    platform_id: string;
 }
