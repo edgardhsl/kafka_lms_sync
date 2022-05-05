@@ -1,23 +1,34 @@
 import { Module } from '@nestjs/common';
-import { ClientsModule, Transport } from '@nestjs/microservices';
+import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
-  imports: [
-    ClientsModule.register([
-      {
-        name: 'MOODLE_SERVICE',
-        transport: Transport.KAFKA,
-        options: {
-          client: {
-            clientId: 'MoodleService',
-            brokers: ['moped-01.srvs.cloudkafka.com:9094'],
-          },
-          consumer: {
-            groupId: 'moodle-producer',
-          },
-        },
-      },
-    ]),
-  ],
+    imports: [
+        ClientsModule.register([
+            {
+                name: 'MOODLE_SERVICE',
+                transport: Transport.KAFKA,
+                options: {
+                    client: {
+                        clientId: 'MoodleService',
+                        brokers: [
+                            '34.135.185.125:9092',
+                        ]
+                    },
+                    consumer: {
+                        groupId: 'moodle-producer',
+                    },
+                },
+            },
+        ]),
+    ],
+    providers: [
+        {
+            provide: 'KAFKA_PRODUCER',
+            useFactory: async (kafkaService: ClientKafka) => {
+                return kafkaService.connect();
+            },
+            inject: ['MOODLE_SERVICE']
+        }
+    ],
 })
-export class MoodleModule {}
+export class MoodleModule { }

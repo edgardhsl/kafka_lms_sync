@@ -1,17 +1,17 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { lastValueFrom } from 'rxjs';
+import { Student } from 'src/model/student';
 
 @Injectable()
-export class AlunoService {
+export class StudentService {
 
     constructor(
         @Inject('CLASSROOM_SERVICE') private _client: ClientProxy
     ) { }
 
-    async save(aluno: any) {
-        await this._client.connect().then(_ => console.log('Connected to Classroom Service'));
-        return lastValueFrom(this._client.emit('4bz2epm2-aluno', 'dsadsads'));
+    async save(student: Student) {
+        return lastValueFrom(this._client.emit('classroom-student', student));
     }
 
 }
