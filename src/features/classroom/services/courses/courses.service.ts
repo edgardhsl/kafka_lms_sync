@@ -11,7 +11,7 @@ export class CoursesService {
     ) { }
 
     async save(course: Course) {
-        return lastValueFrom(this._client.emit('classroom-classwork', course));
+        return lastValueFrom(this._client.emit('classroom-courses', course));
     }
 
 

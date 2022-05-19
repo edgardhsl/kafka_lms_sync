@@ -1,4 +1,4 @@
-import { Body, Controller, Post, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { randomUUID } from 'crypto';
 import { Student } from 'src/model/student';
 import { StudentService } from '../../services/student/student.service';
@@ -11,7 +11,7 @@ export class StudentController {
     ) { }
 
     @Post()
-    save(@Body(new ValidationPipe({transform: true})) student: Student): void {
+    save(@Body() student: Student): void {
         student.id = randomUUID();
         this._studentService.save(student).then(console.log);
     }
