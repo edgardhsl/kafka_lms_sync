@@ -11,7 +11,7 @@ import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
                     client: {
                         clientId: 'MoodleService',
                         brokers: [
-                            '34.135.185.125:9092',
+                            '35.224.210.161:9092',
                         ]
                     },
                     consumer: {
