@@ -9,9 +9,7 @@ export class StudentController {
 
     constructor(
         private _studentService: StudentService
-    ) {
-        _studentService.consume({ topic: 'classroom-student' }, { eachMessage: this.handleMessage });
-    }
+    ) {}
 
     @Post()
     save(@Body() student: Student): void {

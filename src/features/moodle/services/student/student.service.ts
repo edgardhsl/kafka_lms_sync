@@ -18,7 +18,7 @@ export class StudentService implements OnApplicationShutdown {
     ) { }
 
     async save(student: Student) {
-        return lastValueFrom(this._client.emit('classroom-student', student));
+        return lastValueFrom(this._client.emit('moodle-student', student));
     }
 
     async consume(topic: ConsumerSubscribeTopic, config: ConsumerRunConfig ) {

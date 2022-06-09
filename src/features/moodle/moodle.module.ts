@@ -28,7 +28,7 @@ import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
                 return kafkaService.connect();
             },
             inject: ['MOODLE_SERVICE']
-        }
+        },
     ],
 })
 export class MoodleModule { }

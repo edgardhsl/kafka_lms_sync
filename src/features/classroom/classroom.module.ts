@@ -15,7 +15,7 @@ import { StudentService } from './services/student/student.service';
                 transport: Transport.KAFKA,
                 options: {
                     client: {
-                        clientId: 'MoodleService',
+                        clientId: 'ClassroomService',
                         brokers: [
                             '35.224.210.161:9092',
                         ]

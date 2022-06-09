@@ -2,11 +2,11 @@ import { Inject, Injectable, OnApplicationShutdown } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { Consumer, ConsumerRunConfig, ConsumerSubscribeTopic, Kafka } from 'kafkajs';
 import { lastValueFrom } from 'rxjs';
-import { Student } from 'src/model/student';
+import { ClassWork } from 'src/model/classwork';
 
 @Injectable()
-export class StudentService implements OnApplicationShutdown {
-
+export class ClassworkService implements OnApplicationShutdown {
+    
     private readonly kafka = new Kafka({
         brokers: ['35.224.210.161:9092']
     });
@@ -17,8 +17,8 @@ export class StudentService implements OnApplicationShutdown {
         @Inject('CLASSROOM_SERVICE') private _client: ClientProxy
     ) { }
 
-    async save(student: Student) {
-        return lastValueFrom(this._client.emit('classroom-student', student));
+    async save(classWork: ClassWork) {
+        return lastValueFrom(this._client.emit('moodle-classwork', classWork));
     }
 
     async consume(topic: ConsumerSubscribeTopic, config: ConsumerRunConfig ) {
@@ -34,5 +34,6 @@ export class StudentService implements OnApplicationShutdown {
             consumer.disconnect();
         }
     }
+
 
 }

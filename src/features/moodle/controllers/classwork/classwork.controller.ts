@@ -8,10 +8,7 @@ import { ClassworkService } from '../../services/classwork/classwork.service';
 export class ClassworkController {
     constructor(
         private _clasWorkService: ClassworkService
-    ) { 
-        console.log("Iniciando ClassworkController");
-        _clasWorkService.consume({ topic: 'classroom-classwork' }, { eachMessage: this.handleMessage });
-    }
+    ) {}
 
     @Post()
     save(@Body() classWork: ClassWork): void {

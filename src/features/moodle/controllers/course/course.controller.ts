@@ -9,9 +9,7 @@ export class CoursesController {
 
     constructor(
         private _couseService: CoursesService
-    ) {
-        _couseService.consume({ topic: 'classroom-courses' }, { eachMessage: this.handleMessage });
-    }
+    ) {}
 
     @Post()
     save(@Body() course: Course): void {
