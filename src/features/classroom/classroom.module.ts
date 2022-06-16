@@ -28,7 +28,6 @@ import { StudentService } from './services/student/student.service';
         ]),
     ],
     providers: [
-        StudentService,
         {
             provide: 'KAFKA_PRODUCER',
             useFactory: async (kafkaService: ClientKafka) => {
@@ -36,6 +35,7 @@ import { StudentService } from './services/student/student.service';
             },
             inject: ['CLASSROOM_SERVICE']
         },
+        StudentService,
         CoursesService,
         ClassworkService
     ],

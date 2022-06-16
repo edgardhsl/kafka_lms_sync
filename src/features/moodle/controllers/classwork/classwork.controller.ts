@@ -4,7 +4,7 @@ import { EachMessagePayload } from 'kafkajs';
 import { ClassWork } from 'src/model/classwork';
 import { ClassworkService } from '../../services/classwork/classwork.service';
 
-@Controller('classwork')
+@Controller('moodle/classwork')
 export class ClassworkController {
     constructor(
         private _clasWorkService: ClassworkService

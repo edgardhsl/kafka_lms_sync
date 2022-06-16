@@ -4,7 +4,7 @@ import { EachMessagePayload } from 'kafkajs';
 import { Course } from 'src/model/course';
 import { CoursesService } from '../../services/courses/courses.service';
 
-@Controller('course')
+@Controller('moodle/course')
 export class CoursesController {
 
     constructor(

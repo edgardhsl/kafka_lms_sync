@@ -14,7 +14,7 @@ export class StudentService implements OnApplicationShutdown {
     private readonly consumers: Consumer[] = []
 
     constructor(
-        @Inject('CLASSROOM_SERVICE') private _client: ClientProxy
+        @Inject('MOODLE_SERVICE') private _client: ClientProxy
     ) { }
 
     async save(student: Student) {
