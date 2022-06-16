@@ -18,7 +18,7 @@ export class CoursesService implements OnApplicationShutdown {
     ) { }
 
     async save(course: Course) {
-        return lastValueFrom(this._client.emit('moodle-courses', course));
+        return lastValueFrom(this._client.emit('moodle-course', course));
     }
 
     async consume(topic: ConsumerSubscribeTopic, config: ConsumerRunConfig ) {
