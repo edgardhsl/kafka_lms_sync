@@ -1,19 +1,18 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { randomUUID } from 'crypto';
 import { EachMessagePayload } from 'kafkajs';
-import { Course } from 'src/model/course';
-import { CoursesService } from '../../services/courses/courses.service';
+import { Category } from 'src/model/category';
+import { CategoryService } from '../../services/category/category.service';
 
-@Controller('moodle/course')
-export class CoursesController {
+@Controller('moodle/category')
+export class CategoryController {
 
     constructor(
-        private _couseService: CoursesService
+        private _categoryService: CategoryService
     ) {}
 
     @Post()
-    save(@Body() course: Course): void {
-        this._couseService.save(course).then(console.log);
+    save(@Body() category: Category): void {
+        this._categoryService.save(category).then(console.log);
     }
 
     async handleMessage(message: EachMessagePayload) {

@@ -4,19 +4,18 @@ import { EachMessagePayload } from 'kafkajs';
 import { ClassWork } from 'src/model/classwork';
 import { ClassworkService } from '../../services/classwork/classwork.service';
 
-@Controller('classwork')
+@Controller('/classroom/classwork')
 export class ClassworkController {
     constructor(
-        private _clasWorkService: ClassworkService
+        private _classWorkService: ClassworkService
     ) { 
         console.log("Iniciando ClassworkController");
-        _clasWorkService.consume({ topic: 'classroom-classwork' }, { eachMessage: this.handleMessage });
+        _classWorkService.consume({ topic: 'classroom-classwork' }, { eachMessage: this.handleMessage });
     }
 
     @Post()
     save(@Body() classWork: ClassWork): void {
-        classWork.id = randomUUID();
-        this._clasWorkService.save(classWork).then(console.log);
+        this._classWorkService.save(classWork).then(console.log);
     }
 
     async handleMessage(message: EachMessagePayload) {

@@ -8,7 +8,7 @@ import { Course } from 'src/model/course';
 export class CoursesService implements OnApplicationShutdown {
 
     private readonly kafka = new Kafka({
-        brokers: ['35.224.210.161:9092']
+        brokers: ['localhost:9092']
     });
 
     private readonly consumers: Consumer[] = []
