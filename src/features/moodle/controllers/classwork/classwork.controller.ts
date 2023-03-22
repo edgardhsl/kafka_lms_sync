@@ -1,8 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { randomUUID } from 'crypto';
 import { EachMessagePayload } from 'kafkajs';
 import { ClassWork } from 'src/model/classwork';
-import { ClassworkService } from '../../services/classwork/classwork.service';
+import { ClassworkService } from '@moodle/services/classwork/classwork.service';
 
 @Controller('moodle/classwork')
 export class ClassworkController {
