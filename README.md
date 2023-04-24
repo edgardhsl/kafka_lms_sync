@@ -1,73 +1,85 @@
+<br/>
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <h1 align="center">kafka_lms_sync</h1>
+
+  <h3 align="center">Sistema de mensageria para sincronização de dados Instituição - AVA</h3>
+
+  <p align="center">
+    Armazena dados para posteriormente poder ser consumidos por outros serviços de sincronização com ambientes AVAs.
+    <br/>
+    <br/>
+    <br/>
+    <a href="https://github.com/edgardhsl/api-simulacao-instituicao/issues">Report Bug</a>
+    .
+    <a href="https://github.com/edgardhsl/api-simulacao-instituicao/issues">Request Feature</a>
+  </p>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![Contributors](https://img.shields.io/github/contributors/edgardhsl/api-simulacao-instituicao?color=dark-green) ![Forks](https://img.shields.io/github/forks/edgardhsl/api-simulacao-instituicao?style=social) ![Stargazers](https://img.shields.io/github/stars/edgardhsl/api-simulacao-instituicao?style=social) ![Issues](https://img.shields.io/github/issues/edgardhsl/api-simulacao-instituicao) 
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Sumário
 
-## Description
+* [Sobre o projeto](#sobre-o-projeto)
+* [Primeiros passos](#primeiros-passos)
+  * [Pré-requisitos](#pré-requisitos)
+  * [Instalação](#instalação)
+* [Uso da aplicação](#uso-da-aplicação)
+* [Contribuição](#contribuição)
+* [Autores](#autores)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Sobre o projeto
 
-## Installation
+Este projeto é um dos três microsserviços que estão sendo desenvolvidos para a disciplina de TCC 2. 
 
-```bash
-$ npm install
+O objetivo deste serviço é armazenar os dados relacionados a cursos, disciplinas e atividades e fornecer para serviços que posteriormente podem sincronizá-los com ambientes AVAs, assim automatizando parte do processo de gerenciamento dos ambientes.
+
+## Primeiros passos
+
+Abaixo segue as instruções de como executar o projeto em seu ambiente.
+
+### Pré-requisitos
+
+Para que as dependências sejam instaladas, você precisa instalar o npm.
+
+O npm é o gerenciador de pacotes padrão para o ambiente de tempo de execução JavaScript Node.js.
+
+* npm
+
+```sh
+npm install npm@latest -g
 ```
 
-## Running the app
+### Instalação
 
-```bash
-# development
-$ npm run start
+1. Clone the repo
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```sh
+git clone https://github.com/edgardhsl/kafka_lms_sync.git
 ```
 
-## Test
+2. Instale as dependências do projeto
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+```sh
+npm install
 ```
 
-## Support
+## Uso da aplicação
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Você pode executar o projeto com o comando abaixo:
+`npm run dev`
 
-## Stay in touch
+## Contribuição
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
 
-Nest is [MIT licensed](LICENSE).
+### Creating A Pull Request
+
+1. Fazer um Fork do Projeto.
+2. Crie sua branch do recurso (`git checkout -b feature/AmazingFeature`)
+3. Faça o commit das suas alterações (`git commit -m 'Add some AmazingFeature'`)
+4. Envie para a sua branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull-Request
+
+## Autores
+
+* **Edgard H. Santos Lopes** - *Graduando em Sistemas de Informação* - [Edgard H. Santos Lopes](https://github.com/edgardhsl) - *Projeto completo*
