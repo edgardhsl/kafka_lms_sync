@@ -19,7 +19,7 @@ import { StudentService } from './services/student/student.service';
                     client: {
                         clientId: 'MoodleService',
                         brokers: [
-                            '127.0.0.1:9092',
+                            `${process.env.DOCKER_KAFKA_HOST}:9092`,
                         ]
                     },
                     consumer: {
