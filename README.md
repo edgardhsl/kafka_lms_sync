@@ -2,7 +2,7 @@
 <p align="center">
   <h1 align="center">kafka_lms_sync</h1>
 
-  <h3 align="center">Sistema de mensageria para sincronização de dados Instituição - AVA</h3>
+  <h3 align="center">Sistema de mensageria para armazenamento de eventos e sincronização de dados Instituição - AVA</h3>
 
   <p align="center">
     Armazena dados para posteriormente poder ser consumidos por outros serviços de sincronização com ambientes AVAs.
