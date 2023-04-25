@@ -66,7 +66,7 @@ npm install
 ## Uso da aplicação
 
 Você pode executar o projeto com o comando abaixo:
-`npm run dev`
+`npm run start`
 
 ## Contribuição
 
