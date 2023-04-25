@@ -71,7 +71,7 @@ Defina a variável de ambiente com o IP do servidor do Apache Kafka:
 
 Windows Powershell: 
 ```sh
-$env:DOCKER_KAFKA_HOST = 'IP_SERVIDOR_KAFKA'
+[Environment]::SetEnvironmentVariable("DOCKER_KAFKA_HOST", "IP_SERVIDOR_KAFKA", "Machine")
 ```
 
 Linux: 
