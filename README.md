@@ -39,7 +39,7 @@ Abaixo segue as instruções de como executar o projeto em seu ambiente.
 
 ### Pré-requisitos
 
-**NECESSÁRIO UM AMBIENTE DOCKER PRÉ-CONFIGURADO.**
+**NECESSÁRIO UM AMBIENTE DOCKER CONFIGURADO E DISPONÍVEL.**
 
 Para que as dependências sejam instaladas, você precisa instalar o npm.
 
