@@ -39,6 +39,8 @@ Abaixo segue as instruções de como executar o projeto em seu ambiente.
 
 ### Pré-requisitos
 
+**NECESSÁRIO UM AMBIENTE DOCKER PRÉ-CONFIGURADO.**
+
 Para que as dependências sejam instaladas, você precisa instalar o npm.
 
 O npm é o gerenciador de pacotes padrão para o ambiente de tempo de execução JavaScript Node.js.
