@@ -9,9 +9,9 @@
     <br/>
     <br/>
     <br/>
-    <a href="https://github.com/edgardhsl/api-simulacao-instituicao/issues">Report Bug</a>
+    <a href="https://github.com/edgardhsl/api-simulacao-instituicao/issues">Reportar Bug</a>
     .
-    <a href="https://github.com/edgardhsl/api-simulacao-instituicao/issues">Request Feature</a>
+    <a href="https://github.com/edgardhsl/api-simulacao-instituicao/issues">Solicitar recurso</a>
   </p>
 </p>
 
@@ -75,9 +75,9 @@ Você pode executar o projeto com o comando abaixo:
 ### Creating A Pull Request
 
 1. Fazer um Fork do Projeto.
-2. Crie sua branch do recurso (`git checkout -b feature/AmazingFeature`)
-3. Faça o commit das suas alterações (`git commit -m 'Add some AmazingFeature'`)
-4. Envie para a sua branch (`git push origin feature/AmazingFeature`)
+2. Crie sua branch do recurso (`git checkout -b feature/RecursoIncrivel`)
+3. Faça o commit das suas alterações (`git commit -m 'Adicionado um RecursoIncrivel'`)
+4. Envie para a sua branch (`git push origin feature/RecursoIncrivel`)
 5. Abra um Pull-Request
 
 ## Autores
