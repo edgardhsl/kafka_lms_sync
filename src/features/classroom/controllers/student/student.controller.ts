@@ -9,18 +9,10 @@ export class StudentController {
 
     constructor(
         private _studentService: StudentService
-    ) {
-        _studentService.consume({ topic: 'classroom-student' }, { eachMessage: this.handleMessage });
-    }
+    ) {}
 
     @Post()
     save(@Body() student: Student): void {
-        student.id = randomUUID();
         this._studentService.save(student).then(console.log);
-    }
-
-    async handleMessage(message: EachMessagePayload) {
-        const msg: Buffer = Buffer.from(message.message.value);
-        console.log(`[${new Date().toISOString()}] [${message.topic}] ${msg.toString()}`);
     }
 }

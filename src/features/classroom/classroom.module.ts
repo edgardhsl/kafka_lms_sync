@@ -17,7 +17,7 @@ import { StudentService } from './services/student/student.service';
                     client: {
                         clientId: 'ClassroomService',
                         brokers: [
-                            '35.224.210.161:9092',
+                            `${process.env.DOCKER_KAFKA_HOST}:9092`,
                         ]
                     },
                     consumer: {

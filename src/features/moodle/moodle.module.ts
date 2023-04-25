@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ClientKafka, ClientsModule, Transport } from '@nestjs/microservices';
+import { CategoryController } from './controllers/category/category.controller';
 import { ClassworkController } from './controllers/classwork/classwork.controller';
 import { CoursesController } from './controllers/course/course.controller';
 import { StudentController } from './controllers/student/student.controller';
+import { CategoryService } from './services/category/category.service';
 import { ClassworkService } from './services/classwork/classwork.service';
 import { CoursesService } from './services/courses/courses.service';
 import { StudentService } from './services/student/student.service';
@@ -17,7 +19,7 @@ import { StudentService } from './services/student/student.service';
                     client: {
                         clientId: 'MoodleService',
                         brokers: [
-                            '35.224.210.161:9092',
+                            `${process.env.DOCKER_KAFKA_HOST}:9092`,
                         ]
                     },
                     consumer: {
@@ -37,8 +39,9 @@ import { StudentService } from './services/student/student.service';
         },        
         StudentService,
         CoursesService,
-        ClassworkService
+        ClassworkService,
+        CategoryService
     ],
-    controllers: [StudentController, ClassworkController, CoursesController]
+    controllers: [StudentController, ClassworkController, CoursesController, CategoryController]
 })
 export class MoodleModule { }
