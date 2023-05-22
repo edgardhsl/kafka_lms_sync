@@ -6,6 +6,8 @@ import { StudentController } from './controllers/student/student.controller';
 import { ClassworkService } from './services/classwork/classwork.service';
 import { CoursesService } from './services/courses/courses.service';
 import { StudentService } from './services/student/student.service';
+import { CategoryController } from '@classroom/controllers/category/category.controller';
+import { CategoryService } from './services/category/category.service';
 
 @Module({
     imports: [
@@ -37,8 +39,9 @@ import { StudentService } from './services/student/student.service';
         },
         StudentService,
         CoursesService,
-        ClassworkService
+        ClassworkService,
+        CategoryService
     ],
-    controllers: [StudentController, ClassworkController, CoursesController],
+    controllers: [StudentController, ClassworkController, CoursesController, CategoryController],
 })
 export class ClassroomModule { }

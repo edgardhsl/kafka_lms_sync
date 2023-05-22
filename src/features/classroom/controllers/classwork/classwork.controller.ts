@@ -4,7 +4,7 @@ import { EachMessagePayload } from 'kafkajs';
 import { ClassWork } from 'src/model/classwork';
 import { ClassworkService } from '../../services/classwork/classwork.service';
 
-@Controller('/classroom/classwork')
+@Controller('classroom/classwork')
 export class ClassworkController {
     constructor(
         private _classWorkService: ClassworkService
